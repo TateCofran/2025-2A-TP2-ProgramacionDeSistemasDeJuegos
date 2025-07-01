@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SquashAndStretch : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D rigidbody2D;
+    [SerializeField] private new Rigidbody2D rigidbody2D;
     [SerializeField] private float minFallingSpeed = -2.0f;
     [SerializeField] private float maxFallingSpeed = 2.0f;
     [SerializeField] private Vector3 minScale = Vector3.one * 0.5f;
