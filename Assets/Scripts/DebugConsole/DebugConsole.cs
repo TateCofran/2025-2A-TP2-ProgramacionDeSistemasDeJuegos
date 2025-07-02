@@ -75,4 +75,5 @@ public class DebugConsole<T> : IDebugConsole<T>
         }
         return false;
     }
+
 }

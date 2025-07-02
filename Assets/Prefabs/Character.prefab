@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6473a45bc317b284d9222f2d8cbfe20d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 3659010567693264050}
+  character: {fileID: 0}
   animator: {fileID: 6413871392692510266}
   spriteRenderer: {fileID: 434910250161865871}
   speedParameter: Speed
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 4990516862722332053}
   - component: {fileID: 3213220919764564083}
   - component: {fileID: 4135758508970362167}
-  - component: {fileID: 3659010567693264050}
+  - component: {fileID: 4764222646385539561}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -333,7 +333,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3659010567693264050
+--- !u!114 &4764222646385539561
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -346,6 +346,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Model>k__BackingField:
-    <Acceleration>k__BackingField: 10
+    <Acceleration>k__BackingField: 5
     <Speed>k__BackingField: 2
     <JumpForce>k__BackingField: 5

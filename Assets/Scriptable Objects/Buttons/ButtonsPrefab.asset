@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b3e1d34bef865e4095bb6f7bca58a38, type: 3}
   m_Name: ButtonsPrefab
   m_EditorClassIdentifier: 
-  buttons: []
+  buttons:
+  - bttnTextTittle: Spawn Mask Dude
+    characterPrefab: {fileID: 11400000, guid: 7f37eb4f42b94024aa89e3fbbfd21b40, type: 2}
+  - bttnTextTittle: Spawn Ninja Frog
+    characterPrefab: {fileID: 11400000, guid: 1fbdfecad1b2b8e479ff20639b59b110, type: 2}
+  - bttnTextTittle: Spawn Pink Man
+    characterPrefab: {fileID: 11400000, guid: 6c49344489d645241a9c27f746844a96, type: 2}
+  - bttnTextTittle: Spawn Virtual Guy
+    characterPrefab: {fileID: 11400000, guid: c1cf029ac760d414dbab614cb2ca5507, type: 2}

@@ -11,6 +11,7 @@ public class ConsoleWrapper : ScriptableObject, IDebugConsole<string>
 {
     [SerializeField] protected List<CommandSo> commands;
     [SerializeField] protected char[] separators;
+    [SerializeField] private AnimationLibrary animationLibrary;
 
     protected IDebugConsole<string> DebugConsole;
 
@@ -21,14 +22,18 @@ public class ConsoleWrapper : ScriptableObject, IDebugConsole<string>
         get => DebugConsole.Commands;
         set => DebugConsole.Commands = value;
     } 
-
     protected void OnEnable()
     {
+        Debug.unityLogger.logHandler = new DebugLogHandler((msg) => {log(msg);});
+
         DebugConsole = new DebugConsole<string>((str) => log(str), commands.Cast<ICommand<string>>().ToArray());
         var aliasesCommand = new AliassesCommand(DebugConsole);
         DebugConsole.AddCommand(aliasesCommand);
         var helpCommand = new HelpCommand(DebugConsole);
         DebugConsole.AddCommand(helpCommand);
+        var playAnimationCommand = new PlayAnimationCommand(DebugConsole, animationLibrary);
+        DebugConsole.AddCommand(playAnimationCommand);
+
     }
 
     public bool TryAddCommand(ICommand<string> command) => DebugConsole.TryAddCommand(command);
@@ -39,7 +44,7 @@ public class ConsoleWrapper : ScriptableObject, IDebugConsole<string>
         var commandName = inputs[0];
         if (!DebugConsole.IsValidCommand(commandName))
         {
-            log($"command not found: {commandName}");
+            Debug.Log($"command not found: {commandName}");
             return false;
         }
 

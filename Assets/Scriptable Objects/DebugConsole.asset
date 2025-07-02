@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commands: []
   separators: 
+  animationLibrary: {fileID: 11400000, guid: 2602d9b7059bc584ca47a724261e9eea, type: 2}
